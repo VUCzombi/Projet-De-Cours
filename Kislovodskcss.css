@@ -1,0 +1,391 @@
+/* Общие стили для всего документа */
+
+.container {
+    max-width: 1392px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование основного содержимого по горизонтали */
+    background-color: white;
+    color: #555;
+    font: 15px/24px Roboto, Arial, sans-serif;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    overflow: hidden; /* Скрытие содержимого, которое попытается выйти за пределы контейнера */
+}
+
+footer {
+    /* Стили для подвала */
+}
+
+
+/* Стили для верхнего блока сайта */
+.site-header {
+    height: 87px; /* Задаем фиксированную высоту в 100px */
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.user-actions {
+    text-align: right;
+}
+
+.user-actions form {
+    margin-top: 10px;
+}
+
+/* Стили для навигационной панели */
+.site-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #2E8B57;
+    padding: 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+
+/* Стили для выпадающего меню */
+.dropdown {
+    display: inline-block;
+}
+
+.dropbtn {
+    color: white;
+    background-color: #555;
+    padding: 10px 20px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #777;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #777;
+}
+
+/* Стили для блоков с информацией */
+.site-content {
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+/* */
+.second-container > .container {
+    max-width: none; /* Сброс максимальной ширины */
+    margin: 0; /* Сброс отступов */
+    background-color: transparent; /* Прозрачный фон */
+    color: inherit; /* Наследование цвета текста */
+    font: inherit; /* Наследование шрифта */
+    line-height: inherit; /* Наследование межстрочного интервала */
+    overflow: visible; /* Отображение содержимого, выходящего за пределы контейнера */
+}
+.info-block:nth-child(1) {
+    width: 1018px;
+    height: 274px;
+    display: block;
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px;
+    position: relative; /* Используем относительное позиционирование */
+    left: calc(100% - 1018px); /* Сдвигаем блок вправо на расстояние, равное ширине блока */
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px;
+    margin-right: 0; /* Убираем отступ справа */
+}
+
+.info-block:nth-child(2) { /*Ландшафтный дизайн*/
+    width: 1018px; 
+    height: 311px; 
+    display: block;
+    margin: 21px 0 -1px 248px; /* Отступы: верх, справа, низ, слева */
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px; /* Последний указанный margin-bottom */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px; /* Оставляем padding-left как в прошлом */
+}
+.info-block:nth-child(3) { /*Благоустройство парка*/
+    width: 1018px; 
+    height: 274px; 
+    display: block;
+    margin: 21px 0 -1px 248px; /* Отступы: верх, справа, низ, слева */
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px; /* Последний указанный margin-bottom */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px; /* Оставляем padding-left как в прошлом */
+}
+.info-block:nth-child(4) { /*Благоустройство дворовой территории*/
+    width: 1018px; 
+    height: 384px; 
+    display: block;
+    margin: 21px 0 -1px 248px; /* Отступы: верх, справа, низ, слева */
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px; /* Последний указанный margin-bottom */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px; /* Оставляем padding-left как в прошлом */
+}
+.info-block:nth-child(5) { /*Вертикальное озеленение*/
+    width: 1018px; 
+    height: 364px; 
+    display: block;
+    margin: 21px 0 -1px 248px; /* Отступы: верх, справа, низ, слева */
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px; /* Последний указанный margin-bottom */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px; /* Оставляем padding-left как в прошлом */
+}
+.info-block:nth-child(6) { /*Вазоны парковые*/
+    width: 1018px; 
+    height: 353px; 
+    display: block;
+    margin: 21px 0 -1px 248px; /* Отступы: верх, справа, низ, слева */
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px; /* Последний указанный margin-bottom */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px; /* Оставляем padding-left как в прошлом */
+}
+.info-block:nth-child(7) { /*Вазоны уличные*/
+    width: 1018px; 
+    height: 274px; 
+    display: block;
+    margin: 21px 0 -1px 248px; /* Отступы: верх, справа, низ, слева */
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px; /* Последний указанный margin-bottom */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px; /* Оставляем padding-left как в прошлом */
+}
+.info-block:nth-child(8) { /*Урны уличные*/
+    width: 1018px; 
+    height: 364px; 
+    display: block;
+    margin: 21px 0 -1px 248px; /* Отступы: верх, справа, низ, слева */
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px; /* Последний указанный margin-bottom */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px; /* Оставляем padding-left как в прошлом */
+}
+.info-block:nth-child(9) { /*Урны парковые*/
+    width: 1018px; 
+    height: 316px; 
+    display: block;
+    margin: 21px 0 -1px 248px; /* Отступы: верх, справа, низ, слева */
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px; /* Последний указанный margin-bottom */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px; /* Оставляем padding-left как в прошлом */
+}
+.info-block:nth-child(10) { /*Модульные клумбы*/
+    width: 1018px; 
+    height: 303px; 
+    display: block;
+    margin: 21px 0 -1px 248px; /* Отступы: верх, справа, низ, слева */
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px; /* Последний указанный margin-bottom */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px; /* Оставляем padding-left как в прошлом */
+}
+.info-block:nth-child(11) { /*Многоярусные клумбы*/
+    width: 1018px; 
+    height: 364px; 
+    display: block;
+    margin: 21px 0 -1px 248px; /* Отступы: верх, справа, низ, слева */
+    box-shadow: none;
+    border: 1px solid #ebebef;
+    margin-bottom: 10px; /* Последний указанный margin-bottom */
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    padding-left: 220px; /* Оставляем padding-left как в прошлом */
+}
+
+.info-content {
+    display: flex;
+    align-items: center;
+    padding-right: 353px;
+    padding-left: 32px;
+    /* Заменено */
+    padding: 35px 32px 34px 40px;
+    padding-top: 22px;
+    /* Добавлено */
+    /* Добавлено: внутренний отступ для содержимого */
+    margin-left: -210px;
+    /* Добавлено: отрицательный margin для компенсации padding */
+}
+
+
+.info-image1 {
+    max-width: 100%;
+    height: auto;
+    width: 280px;
+    max-height: 210px;
+    margin: 32px; /* Отступ со всех сторон в 32 пикселя */
+}
+
+.info-image2 {
+    max-width: 100%;
+    height: auto;
+    width: 280px;
+    max-height: 200px;
+    margin: 32px;
+}
+
+.info-image3 {
+    max-width: 100%;
+    height: auto;
+    width: 280px;
+    max-height: 186px;
+    margin: 32px;
+}
+
+.info-image4 {
+    max-width: 100%;
+    height: auto;
+    width: 280px;
+    max-height: 210px;
+    margin: 32px;
+}
+
+.info-image5 {
+    max-width: 100%;
+    height: auto;
+    width: 223px;
+    max-height: 300px;
+    margin: 32px;
+}
+
+.info-image6 {
+    max-width: 100%;
+    height: auto;
+    width: 280px;
+    max-height: 289px;
+    margin: 32px;
+}
+
+.info-image7 {
+    max-width: 100%;
+    height: auto;
+    width: 280px;
+    max-height: 210px;
+    margin: 32px;
+}
+
+.info-image8 {
+    max-width: 100%;
+    height: auto;
+    width: 266px;
+    max-height: 300px;
+    margin: 32px;
+}
+
+.info-image9 {
+    max-width: 100%;
+    height: auto;
+    width: 280px;
+    max-height: 252px;
+    margin: 32px;
+}
+
+.info-image10 {
+    max-width: 100%;
+    height: auto;
+    width: 250px;
+    max-height: 239px;
+    margin: 32px;
+}
+
+.info-image11 {
+    max-width: 100%;
+    height: auto;
+    width: 225px;
+    max-height: 300px;
+    margin: 32px;
+}
+
+/* Стили для меню слева */
+#left-menu {
+    width: 292px; /* Изменено на ширину 256px */
+    height: 1276px; /* Изменено на высоту 1312px */
+    background-color: #eee;
+    position: absolute;
+    padding: 10px;
+    margin-right: 48px; /* Добавлен отступ в правую сторону 48px */
+}
+
+#left-menu h2 {
+    width: 1392px; /* Размеры для заголовка */
+    height: 122px; /* Размеры для заголовка */
+    margin: 0; /* Убираем внешние отступы */
+    padding: 10px; /* Добавляем внутренние отступы */
+    background-color: #ffffff; /* Пример цвета фона */
+}
+
+/* Общие стили для контента */
+#content {
+    margin-left: 304px; /* Учитываем ширину левого меню и отступ */
+    padding: 20px;
+    overflow: auto;
+    /* Добавлено для правильного отображения контента */
+}
+
+/* Стили для кнопок в левом меню */
+#left-menu button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Стили для линии разделения в левом меню */
+#left-menu hr {
+    margin: 10px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
