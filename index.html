@@ -16,7 +16,7 @@
 
   <!-- Дополнительные стили, если нужны -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Kislovodsk.css">
 
   <!-- Скрипт для переключения темы -->
   <script src="./assets/js/color-modes.js"></script>
@@ -28,6 +28,7 @@
   <!-- Bootstrap JS и другие скрипты, если нужны -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
   <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Kislovodsk.js"></script>
 </body>
 
 </html>
@@ -118,7 +119,12 @@
   .bd-mode-toggle .dropdown-menu .active .bi {
     display: block !important;
   }
+
+  .custom-footer a {
+    text-decoration: none;
+  }
 </style>
+
 
 
 </head>
@@ -156,6 +162,10 @@
         d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
     </symbol>
   </svg>
+
+  <!-- Кнопка для быстрого возврата на самый верх страницы" -->
+  <button onclick="scrollToTop()" id="scrollTopButton" title="Наверх">&#10148;</button>
+
 
   <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
     <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
@@ -218,15 +228,29 @@
     </symbol>
   </svg>
 
+
+  <!-- Навигационное панель -->
   <div class="col-lg-8 mx-auto p-4 py-md-5">
-    <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-      <a href="/" class="d-flex align-items-center text-body-emphasis text-decoration-none">
-        <svg class="bi me-2" width="40" height="32">
-          <use xlink:href="#bootstrap"></use>
-        </svg>
-        <span class="fs-4">Starter template</span>
-      </a>
-    </header>
+    <nav class="site-nav">
+      <button id="openAllBtn" class="nav-link open-all-btn" onmouseover="toggleDropdown()" onmouseout="hideDropdown()">Открыть все</button>
+      <a href="#" class="nav-link">Главная</a>
+      <a href="#" class="nav-link">О нас</a>
+      <div class="dropdown">
+        <button class="nav-link dropbtn">Услуги</button>
+        <div class="dropdown-content">
+          <a href="#">Услуга 1</a>
+          <a href="#">Услуга 2</a>
+          <a href="#">Услуга 3</a>
+          <a href="#vertical">Услуга 4</a>
+          <a href="#">Услуга 5</a>
+          <a href="#">Услуга 6</a>
+          <a href="#">Услуга 7</a>
+        </div>
+      </div>
+      <a href="#" class="nav-link">Контакты</a>
+      <a href="#" class="nav-link">Обратная связь</a>
+    </nav>
+
 
     <main>
       <h1 class="text-body-emphasis">Уличное благоустройство</h1>
@@ -236,78 +260,62 @@
       <!-- Левое меню -->
       <div class="row g-5">
         <div class="col-md-4">
-          <ul class="list-unstyled">
-
-            <li> <a href="" type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Уличное
-                благоустройств</a>
-            </li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Городское
-                благоустройство</button></li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Ландшафтный
-                дизайн</button></li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Благоустройство
-                парка</button></li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Благоустройство дворовой
-                территории</button></li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Вертикальное
-                озеленение</button></li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Вазоны парковые</button>
-            </li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Вазоны уличные</button>
-            </li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Урны уличные</button>
-            </li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Урны парковые</button>
-            </li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Модульные
-                клумбы</button></li>
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
-            <li><button type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">Многоярусные
-                клумбы</button></li>
+          <ul class="list-unstyled"><!-- Если убрать ломаются точки, но не исчезают -->
 
 
-            <li> <a href="#a123" type="button" class="btn btn-outline-secondary rounded-pill mb-2 w-100">1321651</a>
+            <!-- Главная кнопка -->
+            <li id="redirectButton" class="btn btn-outline-secondary rounded-pill mb-2 w-100 main-button">Уличное
+              благоустройство</li><!-- Зайти в Js -->
+
+            <li>
+              <hr class="dropdown-divider my-2">
             </li>
 
-
+            <!-- Остальные кнопки -->
+            <ul style="list-style-type: none;">
+              <li><a href="#ГБ" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Городское
+                  благоустройство</a></li>
+              <li><a href="#ЛД" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Ландшафтный
+                  дизайн</a></li>
+              <li><a href="#БП" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Благоустройство
+                  парка</a></li>
+              <li><a href="#БДТ" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Благоустройство
+                  дворовой
+                  территории</a></li>
+              <li><a href="#ВО" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Вертикальное
+                  озеленение</a></li>
+              <li><a href="#ВП" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Вазоны
+                  парковые</a></li>
+              <li><a href="#ВУ" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Вазоны
+                  уличные</a></li>
+              <li><a href="#УУ" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Урны уличные</a></li>
+              <li><a href="#УП" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Урны
+                  парковые</a></li>
+              <li><a href="#МК" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Модульные
+                  клумбы</a></li>
+              <li><a href="#МЖК" type="button"
+                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Многоярусные
+                  клумбы</a></li>
+            </ul>
           </ul>
         </div>
 
         <!-- Блоки с информацией -->
+
         <div class="col-md-8">
           <ul class="list-unstyled ps-0">
+
+            <li id="ГБ">
             <li>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
@@ -325,7 +333,7 @@
               </div>
             </li>
 
-
+            <li id="ЛД">
             <li>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
@@ -345,6 +353,7 @@
               </div>
             </li>
 
+            <li id="БП"></li>
             <li>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
@@ -363,6 +372,7 @@
               </div>
             </li>
 
+            <li id="БДТ"></li>
             <li>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
@@ -381,6 +391,7 @@
               </div>
             </li>
 
+            <li id="ВО"></li>
             <li>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
@@ -399,6 +410,7 @@
               </div>
             </li>
 
+            <li id="ВП"></li>
             <li>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
@@ -417,7 +429,7 @@
               </div>
             </li>
 
-            <li id="a123">
+            <li id="ВУ">
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
                   <h3 class="mb-0">Вазоны уличные</h3>
@@ -437,6 +449,7 @@
               </div>
             </li>
 
+            <li id="УУ"></li>
             <li>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
@@ -455,6 +468,7 @@
               </div>
             </li>
 
+            <li id="УП"></li>
             <li>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
@@ -473,10 +487,11 @@
               </div>
             </li>
 
+            <li id="МК"></li>
             <li>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Модульные клумбы Поменять</h3>
+                  <h3 class="mb-0">Модульные клумбы</h3>
                   <div class="mb-1 text-body-secondary">Nov 10</div>
                   <p class="mb-auto">Модульные клумбы - это эффективный способ для владельцев садовых участков создать
                     не только эстетически привлекательные, но и функциональные зоны. Грамотное планирование ландшафтного
@@ -492,10 +507,11 @@
               </div>
             </li>
 
+            <li id="МЖК"></li>
             <li>
               <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                 <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Многоярусные клумбы Поменять</h3>
+                  <h3 class="mb-0">Многоярусные клумбы</h3>
                   <div class="mb-1 text-body-secondary">Nov 11</div>
                   <p class="mb-auto">Многоярусные клумбы - это нестандартные конструкции, привлекающие внимание своим
                     оригинальным видом. Они не только придают уникальность, но и эффективно экономят пространство,
@@ -509,73 +525,235 @@
                 </div>
               </div>
             </li>
-
-
-
-
-
-
         </div>
     </main>
-    <footer class="pt-5 my-5 text-muted border-top">
 
 
-      <div class="row">
-        <div class="col">
+
+
+    <!-- Подвал -->
+    <footer class="my-5 text-muted border-top custom-footer">
+      <div class="row g-3">
+        <div class="col-md-3">
           <!-- Первый столбик (пока пустой) -->
         </div>
 
-        <div class="col">
+        <div class="col-md-3">
           <h5>Каталог продукции</h5>
           <ul class="list-unstyled">
-            <li><button type="button" class="btn btn-link">Вазоны</button></li>
-            <li><button type="button" class="btn btn-link">Цветочницы</button></li>
-            <li><button type="button" class="btn btn-link">Скамейки</button></li>
-            <li><button type="button" class="btn btn-link">Урны для мусора</button></li>
-            <li><button type="button" class="btn btn-link">Ограждения</button></li>
-            <li><button type="button" class="btn btn-link">Конструкторы (модульные системы)</button></li>
-            <li><button type="button" class="btn btn-link">Декоративные элементы</button></li>
-            <li><button type="button" class="btn btn-link">Арт-объекты, инсталляции</button></li>
-            <li><button type="button" class="btn btn-link">Искусственные растения</button></li>
-            <li><button type="button" class="btn btn-link">Новинки</button></li>
+            <div class="wrap">
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Вазоны</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Цветочницы</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Скамейки</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Урны для мусора</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Ограждения</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Детские площадки</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Конструкторы (модульные системы)</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Праздничное оформление</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Декоративные элементы</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Арт-объекты, инсталляции</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Искусственные растения</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Новинки</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </ul>
         </div>
 
-        <div class="col">
+        <div class="col-md-3">
           <h5>Услуги под заказ</h5>
           <ul class="list-unstyled">
-            <li><button type="button" class="btn btn-link">Дизайн общественных интерьеров</button></li>
-            <li><button type="button" class="btn btn-link">Уличное благоустройство</button></li>
-            <li><button type="button" class="btn btn-link">Праздничное оформление</button></li>
-            <li><button type="button" class="btn btn-link">Изделия под заказ</button></li>
-            <li><button type="button" class="btn btn-link">Облицовка</button></li>
-            <li><button type="button" class="btn btn-link">Разработки</button></li>
-            <li><button type="button" class="btn btn-link">Визуализация</button></li>
+            <div class="wrap">
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Дизайн общественных интерьеров</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Уличное благоустройство</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Праздничное оформление</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Изделия под заказ</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Облицовка</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Разработки</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Визуализация</a>
+                  </div>
+                </div>
+              </div>
           </ul>
         </div>
 
-        <div class="col">
+        <div class="col-md-3">
           <h5>Компания</h5>
           <ul class="list-unstyled">
-            <li><button type="button" class="btn btn-link">О компании</button></li>
-            <li><button type="button" class="btn btn-link">Наше производство</button></li>
-            <li><button type="button" class="btn btn-link">История</button></li>
-            <li><button type="button" class="btn btn-link">Выставки</button></li>
-            <li><button type="button" class="btn btn-link">Награды</button></li>
-            <li><button type="button" class="btn btn-link">Вакансии</button></li>
-            <li><button type="button" class="btn btn-link">Отзывы</button></li>
+            <div class="wrap">
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">О компании</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Наше производство</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">История</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Выставки</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Награды</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Вакансии</a>
+                  </div>
+                </div>
+              </div>
+              <div class="item-link">
+                <div class="item">
+                  <div class="title">
+                    <a href="Ссылка">Отзывы</a>
+                  </div>
+                </div>
+              </div>
           </ul>
         </div>
       </div>
 
     </footer>
 
+
+
+    <!-- Мини подвал -->
     <footer class="pt-5 my-5 text-muted border-top">
       Created by the Bootstrap team &middot; &copy; 2024
     </footer>
 
 
-
+    <!-- Конец кода -->
   </div>
   <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -1,0 +1,73 @@
+/* Кнопка для подниятия */
+#scrollTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#scrollTopButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/**/
+.list-unstyled {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.main-button {
+    /* Стили для главной кнопки */
+}
+
+.other-buttons {
+    /* Стили для остальных кнопок */
+    margin-top: 10px;
+    /* Расстояние между кнопками */
+}
+
+
+
+/*Отступ столбцов подвала*/
+.small-font {
+    margin-bottom: 20px;
+    /* Задайте нужный вам отступ между колонками */
+}
+
+
+/* Определяем базовый цвет ссылок */
+.item-link a {
+    color: #888; /* Базовый серый цвет */
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    transition: color 0.3s; /* Добавляем плавный переход для цвета */
+  }
+  /* Определяем цвет ссылок при наведении */
+  .item-link a:hover {
+    color: #000; /* Чёрный цвет при наведении */
+  }
+
+  
+/*Подвал всякие стили*/
+.wrap {
+    font-size: 0.933em;
+}
+
+.item-link {
+    margin-bottom: 0;
+}
+
+.item {
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.933em;
+}

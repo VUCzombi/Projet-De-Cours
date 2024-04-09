@@ -1,0 +1,140 @@
+/* Кнопка для подниятия */
+#scrollTopButton {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#scrollTopButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* Стили для навигационной панели */
+.site-nav {
+    display: flex;
+    justify-content: flex-start;
+    /* Изменено значение, чтобы выровнять элементы слева */
+    align-items: center;
+    /* Центрирование элементов по вертикали */
+    background-color: #2E8B57;
+    padding: 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    /* Убран отступ слева для последнего элемента */
+}
+
+.open-all-btn {
+    margin-right: auto;
+    /* Помещаем кнопку "Открыть все" в начало строки */
+}
+
+/* Стили для выпадающего меню */
+.dropdown {
+    display: inline-block;
+}
+
+.dropbtn {
+    color: white;
+    background-color: #555;
+    padding: 10px 20px;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #555;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #777;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #777;
+}
+
+
+
+/* Левое меню */
+.main-button {
+    /* Стили для главной кнопки */
+}
+
+.other-buttons {
+    /* Стили для остальных кнопок */
+    margin-top: 10px;
+    /* Расстояние между кнопками */
+}
+
+
+/* Подвал */
+/*Отступ столбцов подвала*/
+.small-font {
+    margin-bottom: 20px;
+    /* Задайте нужный вам отступ между колонками */
+}
+
+
+/* Определяем базовый цвет ссылок */
+.item-link a {
+    color: #888;
+    /* Базовый серый цвет */
+    text-decoration: none;
+    /* Убираем подчеркивание ссылок */
+    transition: color 0.3s;
+    /* Добавляем плавный переход для цвета */
+}
+
+/* Определяем цвет ссылок при наведении */
+.item-link a:hover {
+    color: #000;
+    /* Чёрный цвет при наведении */
+}
+
+
+/*Подвал всякие стили*/
+.wrap {
+    font-size: 0.933em;
+}
+
+.item-link {
+    margin-bottom: 0;
+}
+
+.item {
+    margin-bottom: 10px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0.933em;
+}

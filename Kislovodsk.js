@@ -1,23 +1,39 @@
-// Выберите элемент с помощью предоставленного JS-кода
-var mobileHeaderElement = document.querySelector("#mobileheader");
+// Функция для прокрутки страницы наверх
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
 
-// Создайте новый элемент с таким же outerHTML
-var clonedElement = document.createElement("div");
-clonedElement.outerHTML = mobileHeaderElement.outerHTML;
+// Отображение кнопки прокрутки наверх при прокрутке страницы вниз
+window.onscroll = function () { scrollFunction() };
 
-// Примените стили к клонированному элементу
-clonedElement.style.webkitTextSizeAdjust = "100%";
-clonedElement.style.webkitTapHighlightColor = "transparent";
-clonedElement.style.font = "15px/24px Roboto, Arial, sans-serif";
-clonedElement.style.color = "#555";
-clonedElement.style.boxSizing = "border-box";
-clonedElement.style.outline = "none !important";
-clonedElement.style.display = "block!important";
-clonedElement.style.margin = "0";
-clonedElement.style.padding = "0";
-clonedElement.style.position = "relative";
-clonedElement.style.height = "63px";
-clonedElement.style.zIndex = "2997";
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("scrollTopButton").style.display = "block";
+  } else {
+    document.getElementById("scrollTopButton").style.display = "none";
+  }
+}
 
-// Добавьте клонированный элемент куда-то на страницу
-document.body.appendChild(clonedElement);
+//Базовая страница
+document.getElementById("redirectButton").addEventListener("click", function () {
+  window.location.href = "url"; // Замените "url" на адрес страницы, на которую вы хотите перейти
+});
+
+
+//Навигационное панель
+function toggleDropdown() {
+  var dropdownContent = document.querySelector('.dropdown-content');
+  if (dropdownContent.style.display === 'block') {
+    dropdownContent.style.display = 'none';
+  } else {
+    dropdownContent.style.display = 'block';
+  }
+}
+
+function hideDropdown() {
+  var dropdownContent = document.querySelector('.dropdown-content');
+  dropdownContent.style.display = 'none';
+}
