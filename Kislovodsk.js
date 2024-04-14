@@ -24,16 +24,35 @@ document.getElementById("redirectButton").addEventListener("click", function () 
 
 
 //Навигационное панель
-function toggleDropdown() {
-  var dropdownContent = document.querySelector('.dropdown-content');
-  if (dropdownContent.style.display === 'block') {
-    dropdownContent.style.display = 'none';
+function toggleMenu() {
+  var sideNav = document.getElementById("sideNav");
+  if (sideNav.style.width === "250px") {
+    sideNav.style.width = "0";
   } else {
-    dropdownContent.style.display = 'block';
+    sideNav.style.width = "250px";
   }
 }
 
-function hideDropdown() {
-  var dropdownContent = document.querySelector('.dropdown-content');
-  dropdownContent.style.display = 'none';
+function closeNav() {
+  document.getElementById("sideNav").style.width = "0";
 }
+
+//
+document.getElementById('openAllBtn').addEventListener('click', function () {
+  var allLinksContainer = document.getElementById('allLinks');
+  var originalLinks = document.querySelectorAll('.site-nav .nav-link:not(#openAllBtn)');
+  var clonedLinksContainer = allLinksContainer.cloneNode(true);
+  // Remove id attribute to prevent duplicate IDs
+  clonedLinksContainer.removeAttribute('id');
+  // Remove any existing cloned links
+  var existingClonedLinks = allLinksContainer.querySelectorAll('.nav-link');
+  existingClonedLinks.forEach(function (link) {
+      link.parentNode.removeChild(link);
+  });
+  // Append cloned links
+  originalLinks.forEach(function (link) {
+      allLinksContainer.appendChild(link.cloneNode(true));
+  });
+  // Show all links container
+  allLinksContainer.style.display = 'block';
+});

@@ -123,6 +123,10 @@
   .custom-footer a {
     text-decoration: none;
   }
+
+  .dropbtn {
+    white-space: nowrap;
+  }
 </style>
 
 
@@ -230,530 +234,593 @@
 
 
   <!-- Навигационное панель -->
-  <div class="col-lg-8 mx-auto p-4 py-md-5">
-    <nav class="site-nav">
-      <button id="openAllBtn" class="nav-link open-all-btn" onmouseover="toggleDropdown()" onmouseout="hideDropdown()">Открыть все</button>
-      <a href="#" class="nav-link">Главная</a>
-      <a href="#" class="nav-link">О нас</a>
-      <div class="dropdown">
-        <button class="nav-link dropbtn">Услуги</button>
-        <div class="dropdown-content">
-          <a href="#">Услуга 1</a>
-          <a href="#">Услуга 2</a>
-          <a href="#">Услуга 3</a>
-          <a href="#vertical">Услуга 4</a>
-          <a href="#">Услуга 5</a>
-          <a href="#">Услуга 6</a>
-          <a href="#">Услуга 7</a>
+  <div class="row">
+    <div class="col-sm-6 col-md-8 mx-auto p-4 py-md-5">
+      <nav class="site-nav">
+        <button id="openAllBtn" class="nav-link open-all-btn iwmobaile nav-link dropbtn" onmouseover="toggleDropdown()"
+          onmouseout="hideDropdown()">Открыть все</button>
+        <div class="dropdown">
+          <button class="nav-link dropbtn">Компания</button>
+          <div class="dropdown-content">
+            <a href="#" style="white-space: nowrap;">О компании</a>
+            <a href="#" style="white-space: nowrap;">Наше производство</a>
+            <a href="#" style="white-space: nowrap;">История</a>
+            <a href="#vertical" style="white-space: nowrap;">Выставки</a>
+            <a href="#" style="white-space: nowrap;">Награды</a>
+            <a href="#" style="white-space: nowrap;">Вакансии</a>
+            <a href="#" style="white-space: nowrap;">Отзывы</a>
+          </div>
         </div>
+        <a href="#" class="nav-link">Продукция</a>
+        <a href="#" class="nav-link">Под заказ</a>
+        <div class="dropdown">
+          <button class="nav-link dropbtn">Наши работы</button>
+          <div class="dropdown-content">
+            <a href="#" style="white-space: nowrap;">Благоустройство и озеленение городских территорий</a>
+            <a href="#" style="white-space: nowrap;">Внутридворовое благоустройство</a>
+            <a href="#" style="white-space: nowrap;">Оформление интерьера ТЦ, ТРК, БЦ</a>
+            <a href="#vertical" style="white-space: nowrap;">Малые архитектурные формы к спортивным мероприятиям</a>
+            <a href="#" style="white-space: nowrap;">Благоустройство и ландшафтное оформление</a>
+            <a href="#" style="white-space: nowrap;">Оформление интерьера детских учреждений</a>
+            <a href="#" style="white-space: nowrap;">Интерьеры прочие</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="nav-link dropbtn">Информация</button>
+          <div class="dropdown-content">
+            <a href="#" style="white-space: nowrap;">Новости</a>
+            <a href="#" style="white-space: nowrap;">Материалы</a>
+            <a href="#" style="white-space: nowrap;">Вопросы и ответы</a>
+            <a href="#vertical" style="white-space: nowrap;">Статьи</a>
+            <a href="#" style="white-space: nowrap;">Скачать каталог</a>
+            <a href="#" style="white-space: nowrap;">Авторское право</a>
+          </div>
+        </div>
+        <a href="#" class="nav-link">Контакты</a>
+      </nav>
+
+      <!-- Боковое меню для мобильных устройств -->
+      <div class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Главная</a>
+        <a href="#">О нас</a>
+        <div class="dropdown">
+          <button class="dropbtn">Услуги</button>
+          <div class="dropdown-content">
+            <a href="#">Услуга 1</a>
+            <a href="#">Услуга 2</a>
+            <a href="#">Услуга 3</a>
+            <a href="#">Услуга 4</a>
+            <a href="#">Услуга 5</a>
+            <a href="#">Услуга 6</a>
+            <a href="#">Услуга 7</a>
+          </div>
+        </div>
+        <a href="#">Контакты</a>
+        <a href="#">Обратная связь</a>
       </div>
-      <a href="#" class="nav-link">Контакты</a>
-      <a href="#" class="nav-link">Обратная связь</a>
-    </nav>
 
 
-    <main>
-      <h1 class="text-body-emphasis">Уличное благоустройство</h1>
 
-      <hr class="col-3 col-md-2 mb-5">
+      <!-- Название страницы -->
+      <main>
+        <h1 class="text-body-emphasis">Уличное благоустройство</h1>
 
-      <!-- Левое меню -->
-      <div class="row g-5">
-        <div class="col-md-4">
-          <ul class="list-unstyled"><!-- Если убрать ломаются точки, но не исчезают -->
+        <hr class="col-3 col-md-2 mb-5">
+
+        <!-- Левое меню -->
+        <div class="row g-5">
+          <div class="col-md-4">
+            <ul class="list-unstyled"><!-- Если убрать ломаются точки, но не исчезают -->
 
 
-            <!-- Главная кнопка -->
-            <li id="redirectButton" class="btn btn-outline-secondary rounded-pill mb-2 w-100 main-button">Уличное
-              благоустройство</li><!-- Зайти в Js -->
+              <!-- Главная кнопка -->
+              <li id="redirectButton" class="btn btn-outline-secondary rounded-pill mb-2 w-100 main-button">Уличное
+                благоустройство</li><!-- Зайти в Js -->
 
-            <li>
-              <hr class="dropdown-divider my-2">
-            </li>
+              <li>
+                <hr class="dropdown-divider my-2">
+              </li>
 
-            <!-- Остальные кнопки -->
-            <ul style="list-style-type: none;">
-              <li><a href="#ГБ" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Городское
-                  благоустройство</a></li>
-              <li><a href="#ЛД" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Ландшафтный
-                  дизайн</a></li>
-              <li><a href="#БП" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Благоустройство
-                  парка</a></li>
-              <li><a href="#БДТ" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Благоустройство
-                  дворовой
-                  территории</a></li>
-              <li><a href="#ВО" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Вертикальное
-                  озеленение</a></li>
-              <li><a href="#ВП" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Вазоны
-                  парковые</a></li>
-              <li><a href="#ВУ" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Вазоны
-                  уличные</a></li>
-              <li><a href="#УУ" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Урны уличные</a></li>
-              <li><a href="#УП" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Урны
-                  парковые</a></li>
-              <li><a href="#МК" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Модульные
-                  клумбы</a></li>
-              <li><a href="#МЖК" type="button"
-                  class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Многоярусные
-                  клумбы</a></li>
+              <!-- Остальные кнопки -->
+              <ul style="list-style-type: none;">
+                <li><a href="#ГБ" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Городское
+                    благоустройство</a></li>
+                <li><a href="#ЛД" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Ландшафтный
+                    дизайн</a></li>
+                <li><a href="#БП" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Благоустройство
+                    парка</a></li>
+                <li><a href="#БДТ" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Благоустройство
+                    дворовой
+                    территории</a></li>
+                <li><a href="#ВО" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Вертикальное
+                    озеленение</a></li>
+                <li><a href="#ВП" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Вазоны
+                    парковые</a></li>
+                <li><a href="#ВУ" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Вазоны
+                    уличные</a></li>
+                <li><a href="#УУ" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Урны
+                    уличные</a></li>
+                <li><a href="#УП" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Урны
+                    парковые</a></li>
+                <li><a href="#МК" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Модульные
+                    клумбы</a></li>
+                <li><a href="#МЖК" type="button"
+                    class="btn btn-outline-secondary rounded-pill mb-2 w-100 other-buttons">Многоярусные
+                    клумбы</a></li>
+              </ul>
             </ul>
-          </ul>
+          </div>
+
+          <!-- Блоки с информацией -->
+
+          <div class="col-md-8">
+            <ul class="list-unstyled ps-0">
+
+              <li id="ГБ">
+              <li>
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Городское благоустройство</h3>
+                    <div class="mb-1 text-body-secondary">Nov 1</div>
+                    <p class="mb-4">Городское благоустройство — это процесс улучшения инфраструктуры и общественных
+                      пространств города с целью создания комфортных условий для проживания и работы граждан.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Urban improvement.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+
+              <li id="ЛД">
+              <li>
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Ландшафтный дизайн</h3>
+                    <div class="mb-1 text-body-secondary">Nov 2</div>
+                    <p class="mb-auto">Ландшафтный дизайн — это искусство, объединяющее аспекты архитектуры,
+                      строительства, и проектирования с ботаникой, растениеводством, и элементами истории и философии.
+                      Это
+                      также включает в себя конкретные мероприятия по улучшению и озеленению территорий для достижения
+                      гармонии и функциональности.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Landscape design.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+
+              <li id="БП"></li>
+              <li>
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Благоустройство парка</h3>
+                    <div class="mb-1 text-body-secondary">Nov 3</div>
+                    <p class="mb-auto">Благоустройство парка — это комплекс мероприятий, включающий в себя использование
+                      малых архитектурных форм, таких как скамьи, цветочницы, урны, и вазоны, для улучшения общего
+                      внешнего вида и функциональности садов и парков.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Park improvement.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+
+              <li id="БДТ"></li>
+              <li>
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Благоустройство дворовой территории</h3>
+                    <div class="mb-1 text-body-secondary">Nov 4</div>
+                    <p class="mb-auto">Современное благоустройство дворовых территорий включает в себя применение
+                      разнообразных малых архитектурных форм, таких как скамейки, цветочницы и урны, для создания
+                      удобной
+                      и эстетичной окружающей среды.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Landscaping of the yard area.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+
+              <li id="ВО"></li>
+              <li>
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Вертикальное озеленение</h3>
+                    <div class="mb-1 text-body-secondary">Nov 5</div>
+                    <p class="mb-auto">Вертикальное озеленение, завоевывая популярность, не только радует глаз своей
+                      красотой, но и добавляет объема и уюта пространству. Часто используется для достижения
+                      декоративного
+                      эффекта и создания яркого акцента в оформлении.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Vertical landscaping.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+
+              <li id="ВП"></li>
+              <li>
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Вазоны парковые</h3>
+                    <div class="mb-1 text-body-secondary">Nov 6</div>
+                    <p class="mb-auto">Парковые цветочные вазоны не только украшают интерьеры квартир и приусадебные
+                      участки, но также эффективно дополняют облик парковых зон. Оригинальные конструкции не только
+                      служат
+                      декоративным элементом, но также выделяются отличными эксплуатационными качествами.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Park flowerpots.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+
+              <li id="ВУ">
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Вазоны уличные</h3>
+                    <div class="mb-1 text-body-secondary">Nov 7</div>
+                    <p class="mb-auto">Уличные вазоны могут быть модульными, многоярусными или одноярусными,
+                      предоставляя
+                      широкие возможности для конфигурации. Эти системы озеленения легко разбираются и собираются,
+                      позволяя создавать разнообразные композиции. Вертикальное оборудование не только функционально, но
+                      также способно стать элементом архитектурных произведений, поддерживая различные фито-экспозиции.
+                    </p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Outdoor flowerpots.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+
+              <li id="УУ"></li>
+              <li>
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Урны уличные</h3>
+                    <div class="mb-1 text-body-secondary">Nov 8</div>
+                    <p class="mb-auto">Уличные урны для мусора, предназначенные для городов Российской Федерации, должны
+                      обладать высокой устойчивостью к сезонным температурным колебаниям (от -50°C до +50°C), быть
+                      взрывобезопасными и обеспечивать удобство в эксплуатации.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Street urns.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+
+              <li id="УП"></li>
+              <li>
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Урны парковые</h3>
+                    <div class="mb-1 text-body-secondary">Nov 9</div>
+                    <p class="mb-auto">Парковые урны - это не только уникальные и красивые, но и практичные элементы
+                      благоустройства. Созданные в едином стиле с комплектами скамеек, они добавляют гармонии и эстетики
+                      в
+                      общий внешний облик парковых зон.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Park urns.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+
+              <li id="МК"></li>
+              <li>
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Модульные клумбы</h3>
+                    <div class="mb-1 text-body-secondary">Nov 10</div>
+                    <p class="mb-auto">Модульные клумбы - это эффективный способ для владельцев садовых участков создать
+                      не только эстетически привлекательные, но и функциональные зоны. Грамотное планирование
+                      ландшафтного
+                      дизайна позволяет успешно решить задачу в создании максимально красивого и удобного пространства.
+                    </p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Modular flower beds.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+
+              <li id="МЖК"></li>
+              <li>
+                <div
+                  class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                  <div class="col-md-6 p-4 d-flex flex-column position-static">
+                    <h3 class="mb-0">Многоярусные клумбы</h3>
+                    <div class="mb-1 text-body-secondary">Nov 11</div>
+                    <p class="mb-auto">Многоярусные клумбы - это нестандартные конструкции, привлекающие внимание своим
+                      оригинальным видом. Они не только придают уникальность, но и эффективно экономят пространство,
+                      обеспечивая грамотное размещение разнообразных растений.</p>
+                    <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                      Продолжить чтение
+                    </a>
+                  </div>
+                  <div class="col-md-6 d-none d-lg-block">
+                    <img class="img-fluid p-3" src="Multi-tiered flower beds.png" alt="xnj-nj">
+                  </div>
+                </div>
+              </li>
+          </div>
+      </main>
+
+
+
+
+      <!-- Подвал -->
+      <footer class="my-5 text-muted border-top custom-footer">
+        <div class="row g-3">
+          <div class="col-md-3">
+            <!-- Первый столбик (пока пустой) -->
+          </div>
+
+          <div class="col-md-3">
+            <h5>Каталог продукции</h5>
+            <ul class="list-unstyled">
+              <div class="wrap">
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Вазоны</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Цветочницы</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Скамейки</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Урны для мусора</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Ограждения</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Детские площадки</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Конструкторы (модульные системы)</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Праздничное оформление</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Декоративные элементы</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Арт-объекты, инсталляции</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Искусственные растения</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Новинки</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <h5>Услуги под заказ</h5>
+            <ul class="list-unstyled">
+              <div class="wrap">
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Дизайн общественных интерьеров</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Уличное благоустройство</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Праздничное оформление</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Изделия под заказ</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Облицовка</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Разработки</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Визуализация</a>
+                    </div>
+                  </div>
+                </div>
+            </ul>
+          </div>
+
+          <div class="col-md-3">
+            <h5>Компания</h5>
+            <ul class="list-unstyled">
+              <div class="wrap">
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">О компании</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Наше производство</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">История</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Выставки</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Награды</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Вакансии</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-link">
+                  <div class="item">
+                    <div class="title">
+                      <a href="Ссылка">Отзывы</a>
+                    </div>
+                  </div>
+                </div>
+            </ul>
+          </div>
         </div>
+      </footer>
 
-        <!-- Блоки с информацией -->
+      <!-- Мини подвал -->
+      <footer class="pt-5 my-5 text-muted border-top">
+        VUCzombie &middot; &copy; 2024
+      </footer>
 
-        <div class="col-md-8">
-          <ul class="list-unstyled ps-0">
-
-            <li id="ГБ">
-            <li>
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Городское благоустройство</h3>
-                  <div class="mb-1 text-body-secondary">Nov 11</div>
-                  <p class="mb-4">Городское благоустройство — это процесс улучшения инфраструктуры и общественных
-                    пространств города с целью создания комфортных условий для проживания и работы граждан.</p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Urban improvement.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-
-            <li id="ЛД">
-            <li>
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Ландшафтный дизайн</h3>
-                  <div class="mb-1 text-body-secondary">Nov 2</div>
-                  <p class="mb-auto">Ландшафтный дизайн — это искусство, объединяющее аспекты архитектуры,
-                    строительства, и проектирования с ботаникой, растениеводством, и элементами истории и философии. Это
-                    также включает в себя конкретные мероприятия по улучшению и озеленению территорий для достижения
-                    гармонии и функциональности.</p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Landscape design.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-
-            <li id="БП"></li>
-            <li>
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Благоустройство парка</h3>
-                  <div class="mb-1 text-body-secondary">Nov 3</div>
-                  <p class="mb-auto">Благоустройство парка — это комплекс мероприятий, включающий в себя использование
-                    малых архитектурных форм, таких как скамьи, цветочницы, урны, и вазоны, для улучшения общего
-                    внешнего вида и функциональности садов и парков.</p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Park improvement.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-
-            <li id="БДТ"></li>
-            <li>
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Благоустройство дворовой территории</h3>
-                  <div class="mb-1 text-body-secondary">Nov 4</div>
-                  <p class="mb-auto">Современное благоустройство дворовых территорий включает в себя применение
-                    разнообразных малых архитектурных форм, таких как скамейки, цветочницы и урны, для создания удобной
-                    и эстетичной окружающей среды.</p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Landscaping of the yard area.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-
-            <li id="ВО"></li>
-            <li>
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Вертикальное озеленение</h3>
-                  <div class="mb-1 text-body-secondary">Nov 5</div>
-                  <p class="mb-auto">Вертикальное озеленение, завоевывая популярность, не только радует глаз своей
-                    красотой, но и добавляет объема и уюта пространству. Часто используется для достижения декоративного
-                    эффекта и создания яркого акцента в оформлении.</p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Vertical landscaping.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-
-            <li id="ВП"></li>
-            <li>
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Вазоны парковые</h3>
-                  <div class="mb-1 text-body-secondary">Nov 6</div>
-                  <p class="mb-auto">Парковые цветочные вазоны не только украшают интерьеры квартир и приусадебные
-                    участки, но также эффективно дополняют облик парковых зон. Оригинальные конструкции не только служат
-                    декоративным элементом, но также выделяются отличными эксплуатационными качествами.</p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Park flowerpots.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-
-            <li id="ВУ">
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Вазоны уличные</h3>
-                  <div class="mb-1 text-body-secondary">Nov 7</div>
-                  <p class="mb-auto">Уличные вазоны могут быть модульными, многоярусными или одноярусными, предоставляя
-                    широкие возможности для конфигурации. Эти системы озеленения легко разбираются и собираются,
-                    позволяя создавать разнообразные композиции. Вертикальное оборудование не только функционально, но
-                    также способно стать элементом архитектурных произведений, поддерживая различные фито-экспозиции.
-                  </p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Outdoor flowerpots.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-
-            <li id="УУ"></li>
-            <li>
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Урны уличные</h3>
-                  <div class="mb-1 text-body-secondary">Nov 8</div>
-                  <p class="mb-auto">Уличные урны для мусора, предназначенные для городов Российской Федерации, должны
-                    обладать высокой устойчивостью к сезонным температурным колебаниям (от -50°C до +50°C), быть
-                    взрывобезопасными и обеспечивать удобство в эксплуатации.</p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Street urns.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-
-            <li id="УП"></li>
-            <li>
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Урны парковые</h3>
-                  <div class="mb-1 text-body-secondary">Nov 9</div>
-                  <p class="mb-auto">Парковые урны - это не только уникальные и красивые, но и практичные элементы
-                    благоустройства. Созданные в едином стиле с комплектами скамеек, они добавляют гармонии и эстетики в
-                    общий внешний облик парковых зон.</p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Park urns.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-
-            <li id="МК"></li>
-            <li>
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Модульные клумбы</h3>
-                  <div class="mb-1 text-body-secondary">Nov 10</div>
-                  <p class="mb-auto">Модульные клумбы - это эффективный способ для владельцев садовых участков создать
-                    не только эстетически привлекательные, но и функциональные зоны. Грамотное планирование ландшафтного
-                    дизайна позволяет успешно решить задачу в создании максимально красивого и удобного пространства.
-                  </p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Modular flower beds.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-
-            <li id="МЖК"></li>
-            <li>
-              <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                <div class="col-md-6 p-4 d-flex flex-column position-static">
-                  <h3 class="mb-0">Многоярусные клумбы</h3>
-                  <div class="mb-1 text-body-secondary">Nov 11</div>
-                  <p class="mb-auto">Многоярусные клумбы - это нестандартные конструкции, привлекающие внимание своим
-                    оригинальным видом. Они не только придают уникальность, но и эффективно экономят пространство,
-                    обеспечивая грамотное размещение разнообразных растений.</p>
-                  <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
-                    Продолжить чтение
-                  </a>
-                </div>
-                <div class="col-md-6 d-none d-lg-block">
-                  <img class="img-fluid p-3" src="Multi-tiered flower beds.png" alt="xnj-nj">
-                </div>
-              </div>
-            </li>
-        </div>
-    </main>
-
-
-
-
-    <!-- Подвал -->
-    <footer class="my-5 text-muted border-top custom-footer">
-      <div class="row g-3">
-        <div class="col-md-3">
-          <!-- Первый столбик (пока пустой) -->
-        </div>
-
-        <div class="col-md-3">
-          <h5>Каталог продукции</h5>
-          <ul class="list-unstyled">
-            <div class="wrap">
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Вазоны</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Цветочницы</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Скамейки</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Урны для мусора</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Ограждения</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Детские площадки</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Конструкторы (модульные системы)</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Праздничное оформление</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Декоративные элементы</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Арт-объекты, инсталляции</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Искусственные растения</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Новинки</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </ul>
-        </div>
-
-        <div class="col-md-3">
-          <h5>Услуги под заказ</h5>
-          <ul class="list-unstyled">
-            <div class="wrap">
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Дизайн общественных интерьеров</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Уличное благоустройство</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Праздничное оформление</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Изделия под заказ</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Облицовка</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Разработки</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Визуализация</a>
-                  </div>
-                </div>
-              </div>
-          </ul>
-        </div>
-
-        <div class="col-md-3">
-          <h5>Компания</h5>
-          <ul class="list-unstyled">
-            <div class="wrap">
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">О компании</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Наше производство</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">История</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Выставки</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Награды</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Вакансии</a>
-                  </div>
-                </div>
-              </div>
-              <div class="item-link">
-                <div class="item">
-                  <div class="title">
-                    <a href="Ссылка">Отзывы</a>
-                  </div>
-                </div>
-              </div>
-          </ul>
-        </div>
-      </div>
-
-    </footer>
-
-
-
-    <!-- Мини подвал -->
-    <footer class="pt-5 my-5 text-muted border-top">
-      Created by the Bootstrap team &middot; &copy; 2024
-    </footer>
-
-
-    <!-- Конец кода -->
+      <!-- Конец кода -->
+    </div>
   </div>
   <script src="./assets/dist/js/bootstrap.bundle.min.js"></script>
 </body>
