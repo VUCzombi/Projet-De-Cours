@@ -18,7 +18,7 @@ function scrollFunction() {
 }
 
 //Базовая страница///document.getElementById("redirectButton").addEventListener("click", function () {
-  //window.location.href = "url"; // Замените "url" на адрес страницы, на которую вы хотите перейти
+//window.location.href = "url"; // Замените "url" на адрес страницы, на которую вы хотите перейти
 //});
 
 
@@ -43,26 +43,30 @@ function openNav() {
 function closeNav() {
   document.getElementById("sidenav").style.width = "0";
 }
+document.addEventListener('DOMContentLoaded', function () {
 
-// Обработчик события для кнопки "Показать все ссылки"
-document.getElementById('openAllBtn').addEventListener('click', function () {
-  var allLinksContainer = document.getElementById('allLinks');
-  var originalLinks = document.getElementsByClassName('nav-link'); // Получаем все ссылки с классом "nav-link"
-  var clonedLinksContainer = allLinksContainer.cloneNode(true);
-  // Удаляем атрибут id, чтобы избежать дублирования идентификаторов
-  clonedLinksContainer.removeAttribute('id');
-  // Удаляем любые существующие клонированные ссылки
-  var existingClonedLinks = allLinksContainer.querySelectorAll('.nav-link');
-  existingClonedLinks.forEach(function (link) {
+  // Обработчик события для кнопки "Показать все ссылки"
+  document.getElementById('openAllBtn').addEventListener('click', function () {
+    var allLinksContainer = document.getElementById('allLinks');
+    var originalLinks = document.getElementsByClassName('nav-link'); // Получаем все ссылки с классом "nav-link"
+    var clonedLinksContainer = allLinksContainer.cloneNode(true);
+    // Удаляем атрибут id, чтобы избежать дублирования идентификаторов
+    clonedLinksContainer.removeAttribute('id');
+    // Удаляем любые существующие клонированные ссылки
+    var existingClonedLinks = allLinksContainer.querySelectorAll('.nav-link');
+    existingClonedLinks.forEach(function (link) {
       link.parentNode.removeChild(link);
-  });
-  // Добавляем клонированные ссылки
-  originalLinks.forEach(function (link) {
+    });
+    // Добавляем клонированные ссылки
+    originalLinks.forEach(function (link) {
       allLinksContainer.appendChild(link.cloneNode(true));
+    });
+    // Показываем контейнер со всеми ссылками
+    allLinksContainer.style.display = 'block';
   });
-  // Показываем контейнер со всеми ссылками
-  allLinksContainer.style.display = 'block';
+
 });
+
 
 // Функция для открытия и закрытия списка услуг
 function toggleDropdown(button) {
@@ -74,4 +78,35 @@ function toggleDropdown(button) {
   }
 }
 
-// ДОП Услуги Боковое меню для мобильных устройств
+// Бот тг
+document.addEventListener('DOMContentLoaded', function () {
+  const leadElement = document.querySelector('.lead');
+
+  leadElement.addEventListener('click', function () {
+    this.addEventListener('click', function () {
+      feedback(this.innerHTML);
+    });
+  });
+});
+function feedback(action, status) {
+  //
+  let token = "6722776972:AAH1azrK2T2XxIafvbplvz3NpNCqaHL_Mv0";/* :TODO NOTSECURITY REWERITE */
+
+  let chat_id = "2042801143";
+  let user_phone = prompt('Введите телефон для контакта с вами');
+  var msg = `${action} от ${user_phone}`;// from ${getCookie("@")}`;
+  var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${msg}&parse_mode=html`;
+
+  if (user_phone !== "" && user_phone !== null) {
+    fetch(url)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        alert(`Благодарим за  заказ «${action}».\nСейчас ответственный свяжется с вами`)
+        window.location.href = "/#menu";
+      });
+  }
+  else { console.log(' no null') }
+
+}
