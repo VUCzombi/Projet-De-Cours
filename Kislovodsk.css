@@ -22,7 +22,7 @@
 
 /* Стили для навигационной панели */
 /* Стили для основного меню на больших экранах */
-@media screen and (min-width: 1600px) and (min-height: 900px) {
+@media screen and (orientation: landscape) {
     .site-nav {
         display: flex;
         justify-content: flex-start;
@@ -37,7 +37,7 @@
     }
 
     .iwmobaile {
-        background-color: rgba(1, 255, 0, 0.7);
+        background-color: rgba(68, 0, 255, 0.7);
     }
 
     .nav-link {
@@ -48,11 +48,6 @@
         padding: 10px 20px;
         margin-right: 10px;
     }
-
-    .all-links-container { /////
-        display: none;
-    }
-
 
     #bigNav {
         display: none;
@@ -110,8 +105,13 @@
 
 
 /* Стили для бокового меню на мобильных устройствах */
-@media screen and (max-width: 1080px) and (max-height: 2400px) {
+@media screen and (orientation: portrait) {
+    #toolbar {
+        width: 100%;
+    }
+
     .sidenav {
+        display: block;
         height: 100%;
         width: 0;
         position: fixed;
@@ -122,6 +122,12 @@
         overflow-x: hidden;
         transition: 0.5s;
         padding-top: 60px;
+    }
+
+    /* Добавленные стили для открытого состояния боковой панели */
+    .sidenav.open {
+        width: 250px;
+        /* Ширина боковой панели при открытии */
     }
 
     .sidenav a {
@@ -157,7 +163,88 @@
     .menu-toggle {
         display: block;
     }
+
+/* Услуги Боковое меню для мобильных устройств */
+.submenu {
+    display: none;
 }
+
+/* Стили для кнопок Боковое меню для мобильных устройств */
+/* Стили для основной кнопки */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    /* Добавлено для позиционирования стрелочки */
+}
+
+/* Добавляем стрелочку справа */
+.dropbtn::after {
+    content: "\25B6";
+    /* Символ стрелочки вправо */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    /* Расстояние от правого края кнопки */
+    transform: translateY(-50%);
+}
+
+/* Стили для выпадающего контента */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Стили для ссылок в выпадающем контенте */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+/* Стили для ссылок в выпадающем контенте при наведении */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Показывать выпадающий контент, когда наводим на кнопку */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Стили для вложенного выпадающего контента */
+.submenu {
+    display: none;
+}
+
+/* Стили для ссылок во вложенном выпадающем контенте */
+.submenu a {
+    padding: 10px 20px;
+}
+
+/* Показывать вложенный выпадающий контент, когда наводим на ссылку */
+.dropdown-content .show {
+    display: block;
+}
+
+
+}
+
+
+
+
 
 
 

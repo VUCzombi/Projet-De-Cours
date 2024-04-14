@@ -17,10 +17,9 @@ function scrollFunction() {
   }
 }
 
-//Базовая страница
-document.getElementById("redirectButton").addEventListener("click", function () {
-  window.location.href = "url"; // Замените "url" на адрес страницы, на которую вы хотите перейти
-});
+//Базовая страница///document.getElementById("redirectButton").addEventListener("click", function () {
+  //window.location.href = "url"; // Замените "url" на адрес страницы, на которую вы хотите перейти
+//});
 
 
 //Навигационное панель
@@ -33,26 +32,46 @@ function toggleMenu() {
   }
 }
 
-function closeNav() {
-  document.getElementById("sideNav").style.width = "0";
+
+//Боковое меню для мобильных устройств
+// Функция для открытия боковой панели
+function openNav() {
+  document.getElementById("sidenav").style.width = "250px";
 }
 
-//
+// Функция для закрытия боковой панели
+function closeNav() {
+  document.getElementById("sidenav").style.width = "0";
+}
+
+// Обработчик события для кнопки "Показать все ссылки"
 document.getElementById('openAllBtn').addEventListener('click', function () {
   var allLinksContainer = document.getElementById('allLinks');
-  var originalLinks = document.querySelectorAll('.site-nav .nav-link:not(#openAllBtn)');
+  var originalLinks = document.getElementsByClassName('nav-link'); // Получаем все ссылки с классом "nav-link"
   var clonedLinksContainer = allLinksContainer.cloneNode(true);
-  // Remove id attribute to prevent duplicate IDs
+  // Удаляем атрибут id, чтобы избежать дублирования идентификаторов
   clonedLinksContainer.removeAttribute('id');
-  // Remove any existing cloned links
+  // Удаляем любые существующие клонированные ссылки
   var existingClonedLinks = allLinksContainer.querySelectorAll('.nav-link');
   existingClonedLinks.forEach(function (link) {
       link.parentNode.removeChild(link);
   });
-  // Append cloned links
+  // Добавляем клонированные ссылки
   originalLinks.forEach(function (link) {
       allLinksContainer.appendChild(link.cloneNode(true));
   });
-  // Show all links container
+  // Показываем контейнер со всеми ссылками
   allLinksContainer.style.display = 'block';
 });
+
+// Функция для открытия и закрытия списка услуг
+function toggleDropdown(button) {
+  var dropdownContent = button.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none"; // Если меню открыто, закрываем его
+  } else {
+    dropdownContent.style.display = "block"; // Если меню закрыто, открываем его
+  }
+}
+
+// ДОП Услуги Боковое меню для мобильных устройств
